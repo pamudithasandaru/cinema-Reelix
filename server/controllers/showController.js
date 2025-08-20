@@ -82,14 +82,14 @@ export const addShow = async (req, res) =>{
 }
 
 //API to get all shows from the database
-export const getShows = async(req, res) => {
+export const getShows = async(req, res) =>{
     try {
         const shows = await Show.find({showDateTime: {$gte: new Date()}}).populate('movie').sort({ showDateTime: 1 });
 
         //filter unique shows
         const uniqueShows = new Set(shows.map(show => show.movie))
 
-        res.json({success: true, shows: Array.from(uniqueShows)})
+        res.json({ success: true, shows: Array.from(uniqueShows)})
     } catch (error) {
         console.error(error);
         res.json({ success: false, message: error.message});
