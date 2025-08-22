@@ -1,6 +1,7 @@
 import { clerkClient } from "@clerk/express";
 import Booking from "../models/Booking.js";
-
+// You're using Movie model but haven't imported it
+import Movie from "../models/Movie.js"; // Add this import
 
 //API Controller Function to Get User Bookings
 export const getUserBookings = async (req, res)=>{
