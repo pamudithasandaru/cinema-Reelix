@@ -158,7 +158,7 @@ const sendShowRemainders = inngest.createFunction(
                                 <p>This is a quick remainder that your movie:</p>
                                 <h3 style="color: #F84565;">"${task.movieTitle}"</h3>
                                 <p>
-                                    is scheduled for <strong>${new Date(task.showTime).toLocaleDateString('en-US', { timeZone: 'Asia/ Kolkata' })}</strong> at
+                                    is scheduled for <strong>${new Date(task.showTime).toLocaleDateString('en-US', { timeZone: 'Asia/Kolkata' })}</strong> at
                                     <strong>${new Date(task.showTime).toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' })}</strong>.
                                 </p>
                                 <p>It starts in approximately <strong>8 hours</strong> - make sure you're ready!</p>
@@ -186,5 +186,6 @@ export const functions = [
     syncUserDeletion,
     syncUserUpdation,
     releaseSeatsAndDeleteBooking,
-    sendBookingConfirmationEmail
+    sendBookingConfirmationEmail,
+    sendShowRemainders
 ];
