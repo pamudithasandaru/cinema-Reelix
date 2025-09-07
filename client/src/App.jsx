@@ -18,6 +18,9 @@ import ListBookings from './pages/admin/ListBookings'
 import { SignIn } from '@clerk/clerk-react'
 import { useAppContext } from './context/AppContext'
 import Loading from './components/Loading'
+import { Theater } from 'lucide-react'
+
+import Releases from './pages/Releases'
 
 const App = () => {
 
@@ -32,6 +35,8 @@ const App = () => {
      <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/movies' element={<Movies/>} />
+ 
+      <Route path='/release' element={<Releases/>} />
       <Route path='/movies/:id' element={<MovieDetails/>} />
       <Route path='/movies/:id/:date' element={<SeatLayout/>} />
       <Route path='/my-bookings' element={<MyBookings/>} />
